@@ -32,6 +32,8 @@ plt.scatter(df.powierzchnia, df.cena)
 print(df.describe())   #max 10 milionoów, średnia6 861tyś, mediana odstae dosć mocno, 667tyś.  Weźmy fragment między zakresami
 #między min, a 75%
 
+
+
 _min = df.describe().loc["min","cena"]
 q1 = df.describe().loc["25%","cena"]
 q3 = df.describe().loc["75%","cena"]

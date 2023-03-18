@@ -91,4 +91,17 @@ plt.plot( range(1,101), result)
 plt.grid()
 plt.show()
 #zaleta, niewrażliwosć na warości odstające
+#k - domyślnie 5
 
+import joblib
+model = KNeighborsClassifier(5)
+model.fit(X_train, y_train)
+model.score(X_test, y_test)
+joblib.dump(model, "knn.model")
+model1 = joblib.load("knn.model")
+model1.predict(sample.reshape(1,-1))
+dir(model1)
+getattr(model1, 'n_neighbors')
+model1.n_neighbors
+
+#i można leieć do końća z 02-knn
