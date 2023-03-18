@@ -61,3 +61,4 @@ model.fit(X_train, y_train)
 print(model.score(X_test, y_test))
 
 print(pd.DataFrame( confusion_matrix(y_test, model.predict(X_test)) ))
+#zastosowanie - duża liczba cech, dużo danych - miliony. Mało danych - las nie pomoze, może zaszkodzić

@@ -78,7 +78,7 @@ print(pd.DataFrame( confusion_matrix(y_test, model.predict(X_test)  ) ))
 #sprawdźmy
 #model.prodict(sample) - błąd. Strutira 1dno wymiarowa
 model.predict(sample.reshape(1,-1)) #klasyfikator wielokategoryczny, który musi na wyjściu dać wartość dyskretną
-print(model.predict_proba(sample.reshape(1,-1)))
+print(model.predict_proba(sample.reshape(1,-1))) #musi być struktura 2 wymiarowa
 
 # jak wartość "k" wpływa na jakosc estymatora
 result = []
@@ -102,6 +102,8 @@ model1 = joblib.load("knn.model")
 model1.predict(sample.reshape(1,-1))
 dir(model1)
 getattr(model1, 'n_neighbors')
-model1.n_neighbors
+print(model1.n_neighbors)
 
 #i można leieć do końća z 02-knn
+
+Porównanie z regresją logistyczną
